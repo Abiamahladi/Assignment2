@@ -1,0 +1,79 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.background {
+    background-color: #ecf0f1; /* Example background color for the entire page */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outer-rectangle {
+    width: 500px; /* Adjust the width of the outer rectangle (A) */
+    height: 250px; /* Adjust the height of the outer rectangle (A) */
+    background-color: #87CEEB; /* Light blue color for the outer rectangle (A) */
+    position: relative;
+}
+
+.inner-rectangle {
+    width: 150px; /* Adjust the width of the inner rectangles (B) */
+    height: 200px; /* Adjust the height of the inner rectangles (B) */
+    background-color: #ffffff; /* White background color for the inner rectangles (B) */
+    position: absolute;
+    top: 25px; /* Adjust the top position of the inner rectangles (B) */
+    right: 25px; /* Adjust the right position of the inner rectangles (B) */
+}
+
+.inner-rectangle:nth-child(2) {
+    right: 200px; /* Adjust the right position of the second inner rectangle (B) */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 800px) {
+    .outer-rectangle {
+        width: 90%;
+        max-width: none;
+    }
+
+    .inner-rectangle {
+        width: 80%;
+        max-width: none;
+        right: 10%;
+    }
+
+    .inner-rectangle:nth-child(2) {
+        right: 15%;
+    }
+}
+
+@media (max-width: 600px) {
+    .outer-rectangle {
+        width: 90%;
+        max-width: none;
+    }
+
+    .inner-rectangle {
+        width: 80%;
+        max-width: none;
+        right: 10%;
+    }
+
+    .inner-rectangle:nth-child(2) {
+        right: 15%;
+    }
+}
+
+@media (orientation: portrait) {
+    .outer-rectangle {
+        height: 400px; /* Adjust the height for portrait orientation */
+    }
+
+    .inner-rectangle {
+        height: 150px; /* Adjust the height for portrait orientation */
+    }
+}
+
